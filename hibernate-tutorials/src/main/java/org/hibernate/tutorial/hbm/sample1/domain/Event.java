@@ -1,4 +1,4 @@
-package org.hibernate.tutorial.domain;
+package org.hibernate.tutorial.hbm.sample1.domain;
 
 import java.util.Date;
 

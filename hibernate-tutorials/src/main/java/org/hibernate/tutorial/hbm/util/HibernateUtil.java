@@ -1,4 +1,4 @@
-package org.hibernate.tutorial.util;
+package org.hibernate.tutorial.hbm.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -14,7 +14,7 @@ public class HibernateUtil {
 		try{
 			ServiceRegistryBuilder srBuilder = new ServiceRegistryBuilder();
 			ServiceRegistry serviceRegistry = srBuilder.buildServiceRegistry();
-			return new Configuration().configure().buildSessionFactory(serviceRegistry );
+			return new Configuration().configure().buildSessionFactory(/*serviceRegistry */);
 		}
 		catch(Throwable ex){
 			System.err.println("Initial SessionFactory creation failed."+ex);

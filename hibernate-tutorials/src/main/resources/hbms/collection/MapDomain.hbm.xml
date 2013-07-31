@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.tutorial.hbm.collection">
+	<class name="MapDomain" table="MAP_DOMAIN">
+		<id name="id" column="MAP_ID" >
+			<generator class="native" />
+		</id>
+		<property name="name" />
+		<property name="value" />
+		<map name="mapValue" table="MAP_VALUE">
+			<key column="id"/>
+			<index column="question" type="string"/>
+			<element column="answer" type="string"/>
+		</map>
+	</class>
+</hibernate-mapping>

@@ -34,7 +34,7 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>${org.slf4j.version}</version>
 		</dependency>
-		
+
 		<!-- Added this for viewing the hibernate logs -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -53,14 +53,13 @@
 			<artifactId>hsqldb</artifactId>
 			<version>2.0.0</version>
 		</dependency>
-		
+
 		<!-- added incase of mysql database -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.18</version>
 		</dependency>
-
 
 	</dependencies>
 
@@ -108,6 +107,21 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>**/*.xml</include>
+							</includes>
+						</resource>
+					</webResources>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

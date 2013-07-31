@@ -23,6 +23,7 @@ public class EnumTest {
 		Enumeration<String> myEnumeration = myVector.elements();
 		while(myEnumeration.hasMoreElements()){
 			System.out.println(myEnumeration.nextElement());
+			System.out.println(myEnumeration.toString());
 		}
 		
 	}

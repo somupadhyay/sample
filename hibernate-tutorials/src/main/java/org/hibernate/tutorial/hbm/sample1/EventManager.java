@@ -1,15 +1,15 @@
 /**
  * 
  */
-package org.hibernate.tutorial;
+package org.hibernate.tutorial.hbm.sample1;
 
 import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.tutorial.domain.Event;
-import org.hibernate.tutorial.domain.Person;
-import org.hibernate.tutorial.util.HibernateUtil;
+import org.hibernate.tutorial.hbm.sample1.domain.Event;
+import org.hibernate.tutorial.hbm.sample1.domain.Person;
+import org.hibernate.tutorial.hbm.util.HibernateUtil;
 
 /**
  * @author somnath

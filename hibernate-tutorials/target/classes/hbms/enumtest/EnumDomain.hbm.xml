@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.tutorial.hbm.enumtest">
+	<class name="EnumDomain" table="ENUM_DOMAIN">
+		<id name="uniqueId" column="UNIQUE_ID">
+			<generator class="native" />
+		</id>
+		<property name="description" column="DESCRIPTION" />
+		
+		<property name="month" column="MONTH">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">org.hibernate.tutorial.hbm.enumtest.EnumDomain$MONTHS</param>
+				<param name="type">13</param>
+			</type>
+		</property>
+
+		<property name="color" column="COLOR">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">org.hibernate.tutorial.hbm.enumtest.EnumDomain$PRISMCOLORS</param>
+			</type>
+		</property>
+				
+	</class>
+</hibernate-mapping>
