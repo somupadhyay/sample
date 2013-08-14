@@ -1,0 +1,12 @@
+create database testdb;
+use testdb;
+create table duplicateChecker(name varchar(20), phone integer, description varchar(20));
+show tables;
+insert into duplicateChecker(name, phone, description) values("somnath",99163, "first");
+insert into duplicateChecker(name, phone, description) values("somnath",99163, "first");
+insert into duplicateChecker(name, phone, description) values("somnath",99161, "first");
+insert into duplicateChecker(name, phone, description) values("somnat",99161, "first");
+insert into duplicateChecker(name, phone, description) values("somnat",99161, "first");
+insert into duplicateChecker(name, phone, description) values("somnat",99162, "first");
+select * from duplicateChecker;
+select distinct name,phone from duplicateChecker;
