@@ -1,0 +1,151 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.poller.adapter.core</groupId>
+	<artifactId>poller-parent</artifactId>
+	<version>1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<distributionManagement>
+		<repository>
+			<id>central-repo</id>
+			<name>Maven Central Reposistory</name>
+			<url>http://repo1.maven.org/</url>
+		</repository>
+		<snapshotRepository>
+			<id>mirror-repo</id>
+			<name>ibiblio mirrors</name>
+			<url>http://mirrors.ibiblio.org/maven2</url>
+		</snapshotRepository>
+
+	</distributionManagement>
+
+	<developers>
+		<developer>
+			<id>soki002</id>
+			<name>Somnath Upadhyay</name>
+			<email>soki002 at gmail dot com</email>
+			<organization>Home</organization>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Maven 2 Repository</name>
+			<url>http://download.java.net/maven/2</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<repositories>
+
+		<repository>
+			<id>springsource-repo</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.springsource.org/release</url>
+		</repository>
+
+		<repository>
+			<id>mirror-repo</id>
+			<name>ibiblio mirrors</name>
+			<url>http://mirrors.ibiblio.org/maven2</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<org.springframework.version>3.2.1.RELEASE</org.springframework.version>
+		<org.spring.security.version>3.1.2.RELEASE</org.spring.security.version>
+		<org.spring.integration.version>2.2.4.RELEASE</org.spring.integration.version>
+		<org.springframework.amqp.version>1.1.4.RELEASE</org.springframework.amqp.version>
+		<org.slf4j.version>1.6.1</org.slf4j.version>
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.16</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<dependency>
+				 <groupId>org.springframework.integration</groupId>
+				 <artifactId>spring-integration-core</artifactId>
+				 <version>${org.spring.integration.version}</version>
+			</dependency> 
+			<dependency>
+				 <groupId>org.springframework.integration</groupId>
+				 <artifactId>spring-integration-jdbc</artifactId>
+				 <version>${org.spring.integration.version}</version>
+			</dependency> 
+			<dependency>
+				 <groupId>org.springframework.amqp</groupId>
+				 <artifactId>spring-amqp</artifactId>
+				 <version>${org.springframework.amqp.version}</version>
+			</dependency> 
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>4.1.5.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>4.2.0.Final</version>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.8.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.9</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
